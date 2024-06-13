@@ -1,19 +1,15 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="System1_GetClientDetails" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="System1_GetClientDetails" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_URL" Type="InArgument(x:String)" />
     <x:Property Name="in_WorkItemWIID_URL" Type="InArgument(x:String)" />
     <x:Property Name="out_ClientID" Type="OutArgument(x:String)" />
     <x:Property Name="out_ClientCountry" Type="OutArgument(x:String)" />
     <x:Property Name="out_ClientName" Type="OutArgument(x:String)" />
-    <x:Property Name="out_DataTabelClientInfo" Type="InArgument(sd:DataTable)" />
   </x:Members>
-  <this:System1_GetClientDetails.out_DataTabelClientInfo>
-    <InArgument x:TypeArguments="sd:DataTable" />
-  </this:System1_GetClientDetails.out_DataTabelClientInfo>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>707.2,1281.6</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1219.2,1099.2</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>System1_GetClientDetails_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -92,7 +88,7 @@
       <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="System1_GetClientDetails" sap:VirtualizedContainerService.HintSize="636.8,1216.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="System1_GetClientDetails" sap:VirtualizedContainerService.HintSize="636.8,1034.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -104,13 +100,13 @@
         <InArgument x:TypeArguments="x:String" x:Key="in_URL">[in_URL]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Edge" DisplayName="Attach Browser ACME Work Item Details" sap:VirtualizedContainerService.HintSize="574.4,768.8" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="b0248252618a68d61e770e70cd253ff1" Selector="&lt;html app='msedge.exe' title='ACME System 1 - Work Items' /&gt;">
+    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Edge" DisplayName="Attach Browser ACME Work Item Details" sap:VirtualizedContainerService.HintSize="574.4,586.4" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="b0248252618a68d61e770e70cd253ff1" Selector="&lt;html app='msedge.exe' title='ACME System 1 - Work Items' /&gt;">
       <ui:BrowserScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="540.8,621.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="540.8,439.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="ClientInformation" />
             </Sequence.Variables>
@@ -119,9 +115,9 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'P'" sap:VirtualizedContainerService.HintSize="478.4,107.2" sap2010:WorkflowViewState.IdRef="GetValue_1">
+            <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'P'" sap:VirtualizedContainerService.HintSize="478.4,107.2" sap2010:WorkflowViewState.IdRef="GetValue_2">
               <ui:GetValue.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a137aa44-839f-4ff4-8739-77741cada4da" InformativeScreenshot="e1339bea9e39a711ac591cf9779200a4" Selector="&lt;webctrl tag='P' /&gt;">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4eb729dc-4756-4152-9efc-934eec32bced" InformativeScreenshot="e7d675b35dcb561304dac74b6eb5a940" Selector="&lt;webctrl tag='P' /&gt;">
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
                   </ui:Target.TimeoutMS>
@@ -133,11 +129,16 @@
               <ui:GetValue.Value>
                 <OutArgument x:TypeArguments="x:String">[ClientInformation]</OutArgument>
               </ui:GetValue.Value>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
             </ui:GetValue>
-            <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="478.4,180" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+            <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="478.4,180" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
               <ui:MultipleAssign.AssignOperations>
                 <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
-                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
                     <ui:AssignOperation.To>
                       <OutArgument x:TypeArguments="x:String">[out_ClientID]</OutArgument>
                     </ui:AssignOperation.To>
@@ -145,7 +146,7 @@
                       <InArgument x:TypeArguments="x:String">[ClientInformation.Substring(ClientInformation.IndexOf("Client ID:") + "Client ID: ".Length).Split(Environment.NewLine.ToCharArray)(0)]</InArgument>
                     </ui:AssignOperation.Value>
                   </ui:AssignOperation>
-                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_5">
                     <ui:AssignOperation.To>
                       <OutArgument x:TypeArguments="x:String">[out_ClientName]</OutArgument>
                     </ui:AssignOperation.To>
@@ -153,7 +154,7 @@
                       <InArgument x:TypeArguments="x:String">[ClientInformation.Substring(ClientInformation.IndexOf("Client Name: ") + "Client Name: ".Length).Split(Environment.NewLine.ToCharArray)(0)]</InArgument>
                     </ui:AssignOperation.Value>
                   </ui:AssignOperation>
-                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_6">
                     <ui:AssignOperation.To>
                       <OutArgument x:TypeArguments="x:String">[out_ClientCountry]</OutArgument>
                     </ui:AssignOperation.To>
@@ -169,7 +170,6 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:MultipleAssign>
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="478.4,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;&quot;]" />
           </Sequence>
         </ActivityAction>
       </ui:BrowserScope.Body>
