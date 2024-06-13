@@ -189,7 +189,7 @@
                         </ui:CursorPosition>
                       </ui:Click.CursorPosition>
                       <ui:Click.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="832bea14-51f7-4119-aac7-b82aaec8f3af" InformativeScreenshot="a604a171928c66fa13fd019b8844fdbb" Selector="&lt;webctrl id='buttonUpdate' tag='BUTTON' /&gt;" TimeoutMS="2000">
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="832bea14-51f7-4119-aac7-b82aaec8f3af" InformativeScreenshot="a604a171928c66fa13fd019b8844fdbb" Selector="&lt;webctrl id='buttonUpdate' tag='BUTTON' /&gt;" TimeoutMS="1000">
                           <ui:Target.WaitForReady>
                             <InArgument x:TypeArguments="ui:WaitForReady" />
                           </ui:Target.WaitForReady>
@@ -208,7 +208,10 @@
                         </ui:CursorPosition>
                       </ui:Click.CursorPosition>
                       <ui:Click.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="6cf34d30-0f69-471a-a5e2-7295950a1e99" InformativeScreenshot="bf62b30b8f9c0a432781896eb3a57861" Selector="&lt;wnd app='msedge.exe' omit:cls='Chrome_WidgetWin_1' title='ACME System 1 - Person 1 - Microsoft​ Edge' /&gt;&lt;ctrl name='acme-test.uipath.com says' role='dialog' /&gt;&lt;ctrl name='OK' role='push button' /&gt;" TimeoutMS="2000">
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="6cf34d30-0f69-471a-a5e2-7295950a1e99" InformativeScreenshot="bf62b30b8f9c0a432781896eb3a57861" Selector="&lt;wnd app='msedge.exe' omit:cls='Chrome_WidgetWin_1' title='ACME System 1 - Person 1 - Microsoft​ Edge' /&gt;&lt;ctrl name='acme-test.uipath.com says' role='dialog' /&gt;&lt;ctrl name='OK' role='push button' /&gt;">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
                           <ui:Target.WaitForReady>
                             <InArgument x:TypeArguments="ui:WaitForReady" />
                           </ui:Target.WaitForReady>
